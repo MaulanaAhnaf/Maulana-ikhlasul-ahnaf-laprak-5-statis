@@ -1,0 +1,28 @@
+maul=read.delim("clipboard")
+View(maul)                   
+str(maul)
+mean(maul$Pendapatan)
+t.test(maul$Pendapatan, mu=10)
+
+> maul=read.delim("clipboard")
+> View(maul)                   
+> str(maul)
+'data.frame':	10 obs. of  4 variables:
+ $ Pendapatan         : int  15000 15500 17500 14500 14000 16000 14500 15500 16500 14000
+ $ X                  : logi  NA NA NA NA NA NA ...
+ $ Interval.Estimation: chr  "N" "mu" "df" "Mean" ...
+ $ X.1                : num  10 14500 9 15300 1135 ...
+> mean(maul$Pendapatan)
+[1] 15300
+> t.test(maul$Pendapatan, mu=10)
+
+	One Sample t-test
+
+data:  maul$Pendapatan
+t = 42.589, df = 9, p-value = 1.082e-11
+alternative hypothesis: true mean is not equal to 10
+95 percent confidence interval:
+ 14487.86 16112.14
+sample estimates:
+mean of x 
+    15300 
